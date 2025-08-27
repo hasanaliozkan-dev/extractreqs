@@ -1,4 +1,4 @@
-# requirePy
+# extractreqs
 
 ![PyPI version](https://img.shields.io/pypi/v/requirePy.svg)
 [![License - MIT 3-Clause](https://img.shields.io/pypi/l/sfsgl.svg)](https://github.com/hasanaliozkan-dev/sfsgl/blob/main/LICENSE)
