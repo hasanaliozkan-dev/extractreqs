@@ -1,22 +1,23 @@
-#!/usr/bin/env python
-import pytest
 
-"""Tests for `requirePy` package."""
+import os
+import tempfile
+import requirePy
 
-# from requirePy import requirePy
-
-
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
-
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyfeldroy/cookiecutter-pypackage')
-
-
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
+def test_extractreq_basic():
+	code = """
+import sys
+import requests
+import numpy as np
+import skimage
+import sklearn
+"""
+	with tempfile.TemporaryDirectory() as tmpdir:
+		test_file = os.path.join(tmpdir, "test.py")
+		with open(test_file, "w") as f:
+			f.write(code)
+		reqs = requirePy.extractreq(tmpdir)
+		# Should find at least requests, numpy, scikit-image, scikit-learn
+		assert any("requests" in r for r in reqs)
+		assert any("numpy" in r for r in reqs)
+		assert any("scikit-image" in r for r in reqs)
+		assert any("scikit-learn" in r for r in reqs)

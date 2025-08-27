@@ -1,5 +1,5 @@
 import argparse
-from .requirePy import extract_requirements
+from .extractreqs import extract_requirements
 
 def main():
     parser = argparse.ArgumentParser(

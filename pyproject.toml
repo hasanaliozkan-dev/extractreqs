@@ -1,7 +1,7 @@
 [project]
-name = "requirePy"
+name = "extractreqs"
 version = "0.1.0"
-description = "Python Boilerplate contains all the boilerplate you need to create a Python package."
+description = "A tool to automatically extract and generate requirements.txt from Python source code by analyzing imports."
 readme = "README.md"
 authors = [
   {name = "hasanaliozkan", email = "hasanaliozkan@mu.edu.tr"}
@@ -9,9 +9,7 @@ authors = [
 maintainers = [
   {name = "hasanaliozkan", email = "hasanaliozkan@mu.edu.tr"}
 ]
-classifiers = [
-    # TODO
-]
+
 license = {text = "MIT"}
 dependencies = [
   "typer"
@@ -33,7 +31,7 @@ changelog = "https://github.com/hasanaliozkan-dev/requirePy/blob/master/changelo
 homepage = "https://github.com/hasanaliozkan-dev/requirePy"
 
 [project.scripts]
-requirePy = "requirePy.cli:main"
+extractreqs = "requirePy.cli:main"
 
 [tool.ty]
 # All rules are enabled as "error" by default; no need to specify unless overriding.

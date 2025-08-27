@@ -98,6 +98,10 @@ def filter_installed_packages(imports):
     return result
 
 
-def extract_requirements(src_dir):
+def extract_requirements(src_dir, write):
     imports = get_all_imports(src_dir)
-    return sorted(filter_installed_packages(imports))
+    requirements = sorted(filter_installed_packages(imports))
+    if write:
+        with open("requirements.txt", "w") as f:
+            f.write("\n".join(requirements))
+    return requirements
