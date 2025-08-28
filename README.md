@@ -2,7 +2,7 @@
 
 ![PyPI version](https://img.shields.io/pypi/v/requirePy.svg)
 [![License - MIT 3-Clause](https://img.shields.io/pypi/l/sfsgl.svg)](https://github.com/hasanaliozkan-dev/sfsgl/blob/main/LICENSE)
-[![PyPI Downloads](https://static.pepy.tech/badge/sfsgl?label=PyPI%20Downloads)](https://pepy.tech/projects/extractreqs)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/extractreqs?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=BLUE&left_text=downloads)](https://pepy.tech/projects/extractreqs)
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=hasanaliozkan-dev/extractreqs)
 
 requirePy is a tool to automatically extract and generate requirements.txt from Python source code by analyzing imports.
