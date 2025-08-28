@@ -10,7 +10,7 @@ def main():
                         help="Output requirements file (default: requirements.txt)")
     
     args = parser.parse_args()
-    reqs = extract_requirements(args.src)
+    reqs = extract_requirements(args.src, False)
     
     with open(args.output, "w") as f:
         f.write("\n".join(reqs))

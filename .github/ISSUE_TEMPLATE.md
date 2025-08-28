@@ -1,4 +1,4 @@
-* requirePy version:
+* extractreqs version:
 * Python version:
 * Operating System:
 

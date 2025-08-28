@@ -8,7 +8,7 @@ You can contribute in many ways:
 
 ### Report Bugs
 
-Report bugs at https://github.com/hasanaliozkan-dev/requirePy/issues.
+Report bugs at https://github.com/hasanaliozkan-dev/extractreqs/issues.
 
 If you are reporting a bug, please include:
 
@@ -26,11 +26,11 @@ Look through the GitHub issues for features. Anything tagged with "enhancement" 
 
 ### Write Documentation
 
-requirePy could always use more documentation, whether as part of the official docs, in docstrings, or even on the web in blog posts, articles, and such.
+extractreqs could always use more documentation, whether as part of the official docs, in docstrings, or even on the web in blog posts, articles, and such.
 
 ### Submit Feedback
 
-The best way to send feedback is to file an issue at https://github.com/hasanaliozkan-dev/requirePy/issues.
+The best way to send feedback is to file an issue at https://github.com/hasanaliozkan-dev/extractreqs/issues.
 
 If you are proposing a feature:
 
@@ -40,20 +40,20 @@ If you are proposing a feature:
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up `requirePy` for local development.
+Ready to contribute? Here's how to set up `extractreqs` for local development.
 
-1. Fork the `requirePy` repo on GitHub.
+1. Fork the `extractreqs` repo on GitHub.
 2. Clone your fork locally:
 
    ```sh
-   git clone git@github.com:your_name_here/requirePy.git
+   git clone git@github.com:your_name_here/extractreqs.git
    ```
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development:
 
    ```sh
-   mkvirtualenv requirePy
-   cd requirePy/
+   mkvirtualenv extractreqs
+   cd extractreqs/
    python setup.py develop
    ```
 
@@ -99,7 +99,7 @@ Before you submit a pull request, check that it meets these guidelines:
 To run a subset of tests:
 
 ```sh
-pytest tests.test_requirePy
+pytest tests.test_extractreqs
 ```
 
 ## Deploying

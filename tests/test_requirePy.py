@@ -1,7 +1,7 @@
 
 import os
 import tempfile
-import requirePy
+import extractreqs
 
 def test_extractreq_basic():
 	code = """
@@ -15,7 +15,7 @@ import sklearn
 		test_file = os.path.join(tmpdir, "test.py")
 		with open(test_file, "w") as f:
 			f.write(code)
-		reqs = requirePy.extractreq(tmpdir)
+		reqs = extractreqs.extractreq(tmpdir)
 		# Should find at least requests, numpy, scikit-image, scikit-learn
 		assert any("requests" in r for r in reqs)
 		assert any("numpy" in r for r in reqs)

@@ -26,12 +26,12 @@ test = [
 ]
 
 [project.urls]
-bugs = "https://github.com/hasanaliozkan-dev/requirePy/issues"
-changelog = "https://github.com/hasanaliozkan-dev/requirePy/blob/master/changelog.md"
-homepage = "https://github.com/hasanaliozkan-dev/requirePy"
+bugs = "https://github.com/hasanaliozkan-dev/extractreqs/issues"
+changelog = "https://github.com/hasanaliozkan-dev/extractreqs/blob/master/changelog.md"
+homepage = "https://github.com/hasanaliozkan-dev/extractreqs"
 
 [project.scripts]
-extractreqs = "requirePy.cli:main"
+extractreqs = "extractreqs.cli:main"
 
 [tool.ty]
 # All rules are enabled as "error" by default; no need to specify unless overriding.

@@ -1,11 +1,11 @@
 # extractreqs
 
-![PyPI version](https://img.shields.io/pypi/v/requirePy.svg)
+![PyPI version](https://img.shields.io/pypi/v/extractreqs.svg)
 [![License - MIT 3-Clause](https://img.shields.io/pypi/l/sfsgl.svg)](https://github.com/hasanaliozkan-dev/sfsgl/blob/main/LICENSE)
 [![PyPI Downloads](https://static.pepy.tech/personalized-badge/extractreqs?period=total&units=INTERNATIONAL_SYSTEM&left_color=GREY&right_color=BLUE&left_text=downloads)](https://pepy.tech/projects/extractreqs)
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=hasanaliozkan-dev/extractreqs)
 
-requirePy is a tool to automatically extract and generate requirements.txt from Python source code by analyzing imports.
+extractreqs is a tool to automatically extract and generate requirements.txt from Python source code by analyzing imports.
 
 ## How to Use
 
@@ -14,26 +14,26 @@ requirePy is a tool to automatically extract and generate requirements.txt from 
 From your project root, run:
 
 ```bash
-requirePy . -o requirements.txt
+extractreqs . -o requirements.txt
 ```
 
 This will analyze your source code and generate a requirements.txt file.
 
 ### As a Python Module
 
-You can also use requirePy in your own scripts:
+You can also use extractreqs in your own scripts:
 
 ```python
-import requirePy
-reqs = requirePy.extractreq(src_dir="/path/to/your/source", write=True)
+import extractreqs
+reqs = extractreqs.extractreq(src_dir="/path/to/your/source", write=True)
 print(reqs)
 ```
 
 This will return a sorted list of requirements found in the given source directory.
 
-* PyPI package: https://pypi.org/project/requirePy/
+* PyPI package: https://pypi.org/project/extractreqs/
 * Free software: MIT License
-* Documentation: https://requirePy.readthedocs.io.
+* Documentation: https://extractreqs.readthedocs.io.
 
 ## Features
 
