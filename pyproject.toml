@@ -1,7 +1,7 @@
 [project]
 name = "extractreqs"
-version = "0.1.1"
-description = "A tool to automatically extract and generate requirements.txt from Python source code by analyzing imports."
+version = "0.1.2"
+description = "A lightweight and intelligent tool designed to automatically analyze your Python source code, detect imported libraries, and generate accurate requirements.txt files without manual configuration."
 readme = "README.md"
 authors = [
   {name = "hasanaliozkan", email = "hasanaliozkan@mu.edu.tr"}
@@ -29,6 +29,7 @@ test = [
 bugs = "https://github.com/hasanaliozkan-dev/extractreqs/issues"
 changelog = "https://github.com/hasanaliozkan-dev/extractreqs/blob/master/changelog.md"
 homepage = "https://github.com/hasanaliozkan-dev/extractreqs"
+documentation = "https://hasanaliozkan-dev.github.io/extractreqs/"
 
 [project.scripts]
 extractreqs = "extractreqs.cli:main"
