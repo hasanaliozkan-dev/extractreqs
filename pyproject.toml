@@ -1,6 +1,6 @@
 [project]
 name = "extractreqs"
-version = "0.1.2"
+version = "0.1.3"
 description = "A lightweight and intelligent tool designed to automatically analyze your Python source code, detect imported libraries, and generate accurate requirements.txt files without manual configuration."
 readme = "README.md"
 authors = [
