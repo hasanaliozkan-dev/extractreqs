@@ -25,11 +25,11 @@ A lightweight and intelligent tool designed to automatically analyze your Python
 ### Installation
 You can install extractreqs directly from PyPI using standard package managers:
 
-```Bash
+```bash
 pip install extractreqs
 ```
 
-### Usage Examples
+### Usage Examples
 
 #### Basic Python Usage
 
