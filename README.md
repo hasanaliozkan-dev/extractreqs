@@ -28,7 +28,9 @@ You can install extractreqs directly from PyPI using standard package managers:
 ```Bash
 pip install extractreqs
 ```
+
 ### Usage Examples
+
 #### Basic Python Usage
 
 * extractreq(src_dir, write)
