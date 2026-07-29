@@ -37,7 +37,7 @@ pip install extractreqs
 
 Scans the specified directory, extracts the necessary third-party modules, and optionally generates the file.
 
-```Python
+```python
 import extractreqs
 
 # Analyze source code and generate requirements.txt automatically
@@ -51,7 +51,7 @@ except Exception as e:
 ```
 #### CLI Usage
 
-```Bash
+```bash
 extractreqs . -o requirements.txt
 ```
 
@@ -68,7 +68,7 @@ Under the hood, this will:
 #### Complete Workflow Example
 If you are building a deployment pipeline, you can dynamically generate your requirements before packaging:
 
-``` Python
+```python
 from pathlib import Path
 import extractreqs
 
@@ -92,7 +92,7 @@ prepare_deployment()
 ### Development
 To set up for local development:
 
-```Bash
+```bash
 # Clone your fork
 git clone git@github.com:your_username/extractreqs.git
 cd extractreqs
