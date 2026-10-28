@@ -54,7 +54,7 @@ Ready to contribute? Here's how to set up `extractreqs` for local development.
    ```sh
    mkvirtualenv extractreqs
    cd extractreqs/
-   python setup.py develop
+   pip install -e ".[test]"
    ```
 
 4. Create a branch for local development:
@@ -65,13 +65,11 @@ Ready to contribute? Here's how to set up `extractreqs` for local development.
 
    Now you can make your changes locally.
 
-5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions with tox:
+5. When you're done making changes, check that your changes pass ruff and the tests:
 
    ```sh
-   make lint
-   make test
-   # Or
-   make test-all
+   ruff check .
+   pytest
    ```
 
    To get flake8 and tox, just pip install them into your virtualenv.

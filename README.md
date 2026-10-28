@@ -33,9 +33,9 @@ pip install extractreqs
 
 #### Basic Python Usage
 
-* extractreq(src_dir, write)
+* extractreq(src_dir, write=False)
 
-Scans the specified directory, extracts the necessary third-party modules, and optionally generates the file.
+Scans the specified directory, extracts the necessary third-party modules, and optionally generates the file. Virtual environments (`.venv`, `venv`, or any folder with a `pyvenv.cfg`) and tool folders like `.git` are skipped, and files that fail to parse are skipped with a warning.
 
 ```python
 import extractreqs
@@ -72,19 +72,21 @@ If you are building a deployment pipeline, you can dynamically generate your req
 from pathlib import Path
 import extractreqs
 
+
 def prepare_deployment():
     project_root = Path.cwd()
-    
+
     print(f"Scanning {project_root} for dependencies...")
-    
+
     # 1. Extract requirements and create the file
     dependencies = extractreqs.extractreq(src_dir=str(project_root), write=True)
-    
+
     # 2. Verify results
     if dependencies:
         print(f"Successfully generated requirements.txt with {len(dependencies)} packages.")
     else:
         print("No external dependencies found. Project uses only standard libraries.")
+
 
 # Execute the workflow
 prepare_deployment()
