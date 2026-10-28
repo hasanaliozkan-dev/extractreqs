@@ -72,8 +72,6 @@ Ready to contribute? Here's how to set up `extractreqs` for local development.
    pytest
    ```
 
-   To get flake8 and tox, just pip install them into your virtualenv.
-
 6. Commit your changes and push your branch to GitHub:
 
    ```sh
@@ -90,27 +88,35 @@ Before you submit a pull request, check that it meets these guidelines:
 
 1. The pull request should include tests.
 2. If the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring, and add the feature to the list in README.md.
-3. The pull request should work for Python 3.12 and 3.13. Tests run in GitHub Actions on every pull request to the main branch, make sure that the tests pass for all supported Python versions.
+3. The pull request should work for Python 3.11 and newer. Tests run in GitHub Actions on every pull request to the main branch; make sure they pass for all supported Python versions.
 
 ## Tips
 
-To run a subset of tests:
+To run a single test:
 
 ```sh
-pytest tests.test_extractreqs
+pytest tests/test_extractreqs.py::test_relative_imports_are_ignored
 ```
 
 ## Deploying
 
-A reminder for the maintainers on how to deploy. Make sure all your changes are committed (including an entry in HISTORY.md). Then run:
+A reminder for the maintainers on how to release:
 
-```sh
-bump2version patch # possible: major / minor / patch
-git push
-git push --tags
-```
+1. Set the new `version` in `pyproject.toml` and move the "Unreleased" notes in HISTORY.md under that version with today's date.
+2. Commit and push to `main`, and wait for the Tests workflow to pass.
+3. Tag the release and push the tag:
 
-You can set up a [GitHub Actions workflow](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#publishing-to-pypi) to automatically deploy your package to PyPI when you push a new tag.
+   ```sh
+   git tag -a v0.2.0 -m "Release v0.2.0"
+   git push origin v0.2.0
+   ```
+
+   Pushing a `v*` tag runs `.github/workflows/publish.yml`, which builds the package and uploads it to PyPI with Trusted Publishing (no API token needed).
+4. Create the GitHub release from the tag, with that version's notes from HISTORY.md:
+
+   ```sh
+   gh release create v0.2.0 --verify-tag --title "extractreqs 0.2.0" --notes "..."
+   ```
 
 ## Code of Conduct
 
